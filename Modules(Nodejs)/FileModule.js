@@ -43,11 +43,11 @@ fs.readFile("./test.txt", "utf-8", (err, res) => {
 // fs.mkdirSync("my-docs/a/b", { recursive: true });
 
 /*
- * Writing: fs.writeFileSync() – Creates/Overwrites a file with content.
- * Reading: fs.readFileSync() – Reads content from a file.
- * Appending: fs.appendFileSync() – Adds content to an existing file.
- * Deleting: fs.unlinkSync() – Deletes a file.
- * Checking Info: fs.statSync() – Gets details about a file (size, timestamp, etc.).
+ * Writing: fs.writeFileSync(path, data) – Creates/Overwrites a file with content.
+ * Reading: fs.readFileSync(path, encoding) – Reads content from a file.
+ * Appending: fs.appendFileSync(path, data) – Adds content to an existing file.
+ * Deleting: fs.unlinkSync(path) – Deletes a file.
+ * Checking Info: fs.statSync(path) – Gets details about a file (size, timestamp, etc.).
  */
 /*
  * Use fs.writeFileSync() to create or overwrite a file with content.
