@@ -51,8 +51,8 @@ console.log(os.cpus().length); // number of cores
 /* 
 
 * 🏗 (1) Client Requests
-Users send requests (e.g., opening a webpage, fetching data).
-These requests can be read/write operations (e.g., fetching user details or saving a form).
+-> Users send requests (e.g., opening a webpage, fetching data).
+-> These requests can be read/write operations (e.g., fetching user details or saving a form).
 
 Example:
 A browser requests GET /profile to fetch user details.
@@ -60,8 +60,8 @@ A mobile app sends POST /order to place an order.
 
 
 * ⚙ (2) Event-Driven Non-Blocking Architecture
-Instead of handling one request at a time, Node.js can handle multiple requests simultaneously.
-It doesn’t wait for a request to finish before starting another.
+-> Instead of handling one request at a time, Node.js can handle multiple requests simultaneously.
+-> It doesn’t wait for a request to finish before starting another.
 
 🔹 Example (Blocking vs Non-Blocking I/O)
 🚫 Blocking Code (Slow)
@@ -87,20 +87,20 @@ console.log("This prints immediately!"); // Runs without waiting
 
 * 🚀 (3) The Event Loop
 The heart of Node.js.
-Listens for events (requests) and assigns them for execution.
-Ensures non-blocking behavior by using callbacks & promises.
+-> Listens for events (requests) and assigns them for execution.
+-> Ensures non-blocking behavior by using callbacks & promises.
 
 How It Works?
 1️⃣ A client sends a request → Node.js receives it.
 2️⃣ The Event Loop checks if the request is CPU-intensive:
 
-If not CPU-intensive (e.g., reading a file, fetching data) → Handles it immediately.
-If CPU-intensive (e.g., image processing, large calculations) → Sends it to Worker Threads.
+-> If not CPU-intensive (e.g., reading a file, fetching data) → Handles it immediately.
+-> If CPU-intensive (e.g., image processing, large calculations) → Sends it to Worker Threads.
 3️⃣ After processing, the response is sent back.
 
 * 🏭 (4) Worker Threads (For Heavy Tasks)
-Node.js is single-threaded but can use Worker Threads for CPU-intensive tasks.
-Ideal for image processing, AI models, or heavy calculations.
+-> Node.js is single-threaded but can use Worker Threads for CPU-intensive tasks.
+-> Ideal for image processing, AI models, or heavy calculations.
 
 🔹 Example: Using Worker Threads
 const { Worker } = require('worker_threads');
@@ -109,8 +109,8 @@ worker.on('message', (msg) => console.log("Worker response:", msg));
 
 
 * 🗄 (5) Asynchronous I/O Operations
-I/O (Input/Output) operations (like DB queries, file reads) don’t block the main thread.
-Uses callbacks, promises, or async/await.
+-> I/O (Input/Output) operations (like DB queries, file reads) don’t block the main thread.
+-> Uses callbacks, promises, or async/await.
 
 🔹 Example: Fetching Data Asynchronously
 const fetch = require('node-fetch');
@@ -122,7 +122,7 @@ async function getData() {
 }
 getData();
 
-Uses async/await to handle the request without blocking other operations.
+-> Uses async/await to handle the request without blocking other operations.
 
 
 6. Full Flow of Node.js Architecture
@@ -132,4 +132,13 @@ Uses async/await to handle the request without blocking other operations.
 3️⃣ If it requires database access, it delegates to Async I/O
 4️⃣ If it's CPU-intensive, it assigns a Worker Thread
 5️⃣ Once processed, the response is sent back to the user
+*/
+
+/*
+ *                       🔹 Key Points
+✔ Node.js uses an event-driven model to handle multiple requests efficiently
+✔ The Event Loop ensures non-blocking behavior, making apps fast
+✔ Worker Threads handle heavy CPU tasks in the background
+✔ Asynchronous I/O allows handling multiple operations at once 
+
 */
