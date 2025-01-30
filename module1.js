@@ -20,3 +20,14 @@
  */
 
 // version check -> npm -v (npm --version) , node --version (node-v)
+
+// --------------------------------------------------------------------------------------------------------------------------
+
+/*            Why NodeJs is Fast ??
+* ✅ Single-threaded, event-driven model → Handles multiple requests efficiently
+* ✅ Non-blocking I/O → Doesn't wait for slow tasks
+* ✅ Uses Worker Threads for heavy tasks → Keeps the main thread free
+* ✅ Streams data instead of loading everything at once
+
+
+ */
