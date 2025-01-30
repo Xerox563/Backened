@@ -1,0 +1,13 @@
+{
+  "name": "backened",
+  "version": "1.0.0",
+  "description": "Welcome to the **Backend Repository**! 🚀 This repository is a curated collection of **backend development tutorials, code snippets, and notes** 📚 to help you learn and build efficient backend systems.",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node hello.js"
+  },
+  "keywords": [],
+  "author": "Amit Gangwar",
+  "license": "ISC"
+}

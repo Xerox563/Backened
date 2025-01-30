@@ -18,3 +18,5 @@
 ✅ Event-Driven: Reacts to things happening (e.g., when a user logs in, Node.js processes it immediately).
 ✅ Built-in Modules: Includes tools for handling files, HTTP requests, databases, and more. 
  */
+
+// version check -> npm -v (npm --version) , node --version (node-v)
